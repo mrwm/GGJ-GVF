@@ -6,16 +6,23 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+
     private SceneIndexes current_level_index;
     private static GameManager instance;
     private static int[] unlockedLevels = {1,0,0,0};
+
+    private SceneIndexes current_scene_index;
+    private LevelIndexes current_level_index;
+    private static GameManager instance; 
+
     // Start is called before the first frame update
     private void Start()
     {
         instance = this;
         DontDestroyOnLoad(this.gameObject);
-        current_level_index = SceneIndexes.MAINMENU;
-        instance.setLevel(current_level_index);
+        current_scene_index = SceneIndexes.MAINMENU;
+        current_level_index = LevelIndexes.LVONE;
+        instance.setScene(current_scene_index);
         LoadGame();
     }
     public static GameManager getManager()
@@ -23,6 +30,7 @@ public class GameManager : MonoBehaviour
         //singleton pattern
         return instance;
     }
+
     public static int[] getUnlockedLevels()
     {
         return unlockedLevels;
@@ -33,8 +41,19 @@ public class GameManager : MonoBehaviour
     //     unlockedLevels[levelNumber - 1] = 1;
     // }
     public void setLevel (SceneIndexes level)
+
+    public void setScene (SceneIndexes level)
     {
-        current_level_index = level;
+        current_scene_index = level;
+    }
+    public int getScene()
+    {
+        return (int)current_scene_index;
+    }
+
+    public void setLevel (LevelIndexes lvl)
+    {
+        current_level_index = lvl;
     }
     public int getLevel()
     {
@@ -43,6 +62,6 @@ public class GameManager : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene((int)current_level_index);
+        SceneManager.LoadScene((int)current_scene_index);
     }
 }
