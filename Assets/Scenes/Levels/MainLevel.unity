@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1986726349}
-  flag: {fileID: 154970339}
+  flagRight: {fileID: 154970339}
   levelMgr: {fileID: 1084043266}
 --- !u!20 &519420031
 Camera:
