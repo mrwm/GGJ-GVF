@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LevelLoading : MonoBehaviour
 {
-   public float timer = 0.0f;
-   public float loadTime = 5.0f;
+    public float timer = 0.0f;
+    public float loadTime = 5.0f;
     private GameManager gm;
 
     // Start is called before the first frame update

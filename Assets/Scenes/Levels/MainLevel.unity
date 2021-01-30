@@ -1277,10 +1277,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1084043266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6b94a9316b12929b92eb2297a9f45b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 720d05de73572cf44bf2ea3ab1624d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelInd: 0
+  timer: 0
+  loadTime: 5
 --- !u!4 &1127914034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8722187305096361509, guid: a95da525b42ae9a0791a454983f556e4,

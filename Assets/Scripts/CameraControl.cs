@@ -26,9 +26,6 @@ public class CameraControl : MonoBehaviour{
   // Start is called before the first frame update
   void Start(){
 
-    // Always start at level 0, then change later.
-    levelIndex = levelMgr.GetComponent<LevelManager>().levelInd;
-
     // Get camera dimensions
     camera = Camera.main;
     halfHeight = camera.orthographicSize;
