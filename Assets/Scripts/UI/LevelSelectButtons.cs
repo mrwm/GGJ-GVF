@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class LevelSelectButtons : MonoBehaviour
 {
     public Button back, level1, level2, level3, level4;
+    private GameManager gm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,11 @@ public class LevelSelectButtons : MonoBehaviour
         level2.onClick.AddListener(leveltwoOnClick);
         level3.onClick.AddListener(levelthreeOnClick);
         level4.onClick.AddListener(levelfourOnClick);
+        gm = GameManager.getManager();
+    }
+    private void Awake()
+    {
+        
     }
 
     // Update is called once per frame
@@ -25,12 +32,14 @@ public class LevelSelectButtons : MonoBehaviour
 
     void backOnClick()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene((int)SceneIndexes.MAINMENU);
         
     }
     void leveloneOnClick()
     {
-
+        gm.setLevel(SceneIndexes.GAME);
+        SceneManager.LoadScene((int)SceneIndexes.LOADING);
+        
     }
     void leveltwoOnClick()
     {

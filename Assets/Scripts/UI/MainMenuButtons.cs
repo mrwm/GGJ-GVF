@@ -21,6 +21,6 @@ public class MainMenuButtons : MonoBehaviour
     }
     void StartOnClick()
     {
-        SceneManager.LoadScene("Level Select");
+        SceneManager.LoadScene("LevelSelect");
     }
 }
