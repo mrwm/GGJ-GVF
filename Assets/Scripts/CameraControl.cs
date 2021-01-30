@@ -7,8 +7,8 @@ public class CameraControl : MonoBehaviour{
   public GameObject player;
   private Vector3 playerPos;
 
-  public GameObject flag;
-  private float flagPos;
+  public GameObject flagRight;
+  private float flagRightPos;
 
   private float offset;
   private float offsetSmooth;
@@ -17,11 +17,17 @@ public class CameraControl : MonoBehaviour{
   private Camera camera;
   float halfHeight;
   float halfWidth;
-  //float horizontalMin;
+  float horizontalMin;
   float horizontalMax;
+
+  private int levelIndex;
+  public GameObject levelMgr;
 
   // Start is called before the first frame update
   void Start(){
+
+    // Always start at level 0, then change later.
+    levelIndex = levelMgr.GetComponent<LevelManager>().levelInd;
 
     // Get camera dimensions
     camera = Camera.main;
@@ -29,12 +35,12 @@ public class CameraControl : MonoBehaviour{
     halfWidth = camera.aspect * halfHeight;
 
     // Get the min and max of camera dimensions
-    //horizontalMin = -halfWidth;
+    horizontalMin = -halfWidth;
     horizontalMax =  halfWidth;
 
     // Makes the player not in the center of the camera
     offset = horizontalMax/2 - (player.transform.localScale.x*2);
-    offsetSmooth = offset;
+    offsetSmooth = offset; // + player.GetComponent<PlayerControler>().speed;
   }
 
   // Update is called once per frame
@@ -44,7 +50,7 @@ public class CameraControl : MonoBehaviour{
 
     // Get the flag position relative to the player:
     // this is assuming that the flag is always on the right.
-    flagPos = flag.transform.position.x - player.transform.position.x;
+    flagRightPos = flagRight.transform.position.x - player.transform.position.x;
 
     // Update the location of the camera according to the player's X-position 
     if(player.transform.localScale.x > 0f)
@@ -53,7 +59,7 @@ public class CameraControl : MonoBehaviour{
       playerPos = new Vector3(playerPos.x - offset, transform.position.y, transform.position.z);
 
     // Stop the camera from panning more to the right if player passed the flag
-    if(flagPos > horizontalMax)
+    if(flagRightPos > horizontalMax)
       transform.position = Vector3.Lerp(transform.position, playerPos, offsetSmooth * Time.deltaTime);
   }
 

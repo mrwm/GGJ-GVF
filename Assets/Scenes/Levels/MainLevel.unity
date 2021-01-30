@@ -647,6 +647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1986726349}
   flag: {fileID: 154970339}
+  levelMgr: {fileID: 1084043266}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1170,6 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b94a9316b12929b92eb2297a9f45b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelInd: 0
 --- !u!4 &1127914034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8722187305096361509, guid: a95da525b42ae9a0791a454983f556e4,
