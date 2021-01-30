@@ -7,7 +7,14 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     private SceneIndexes current_level_index;
-    private static GameManager instance; 
+    private static GameManager instance;
+    public bool second_load = true;
+
+    public float health_level = 1.0f;
+    public int number_of_chests_collected = 0;
+    public int total_gacha_currency = 0;
+    public int total_princess_saved = 0;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -30,9 +37,14 @@ public class GameManager : MonoBehaviour
     {
         return (int)current_level_index;
     }
-
+    
+    public bool isSecondLoad()
+    {
+        return second_load;
+    }
     public void LoadGame()
     {
+        instance.second_load = !instance.second_load;
         SceneManager.LoadScene((int)current_level_index);
     }
 }
