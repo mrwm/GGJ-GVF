@@ -337,25 +337,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Loading Screen
       objectReference: {fileID: 0}
-    - target: {fileID: 5645467877705828114, guid: bb84d01f4cf90024c8277f96a7dad9be,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5645467878107082909, guid: bb84d01f4cf90024c8277f96a7dad9be,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5645467878107082909, guid: bb84d01f4cf90024c8277f96a7dad9be,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7287224384603849338, guid: bb84d01f4cf90024c8277f96a7dad9be,
-        type: 3}
-      propertyPath: loadTime
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb84d01f4cf90024c8277f96a7dad9be, type: 3}

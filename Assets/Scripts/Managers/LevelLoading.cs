@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelLoading : MonoBehaviour
 {
     public float timer = 0.0f;
-    public float loadTime = 2.0f;
+    public float loadTime = 3.0f;
     public Text loading_txt;
     private GameManager gm;
     public Image ice_cream;
@@ -16,11 +16,6 @@ public class LevelLoading : MonoBehaviour
     void Start()
     {
         gm = GameManager.getManager();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         if (gm.isSecondLoad())
         {
             ice_cream.enabled = false;
@@ -31,6 +26,15 @@ public class LevelLoading : MonoBehaviour
             ice_cream.enabled = true;
             slime.enabled = false;
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
+        timer += Time.deltaTime;
+
         float loading_distant = (loadTime - timer);
         if (loading_distant >= 3)
         {
@@ -49,7 +53,6 @@ public class LevelLoading : MonoBehaviour
             loading_txt.text = "Loading...";
         }
 
-        timer += Time.deltaTime;
         if (timer >= loadTime)
         {
             gm.LoadGame();
