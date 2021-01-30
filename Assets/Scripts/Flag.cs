@@ -6,10 +6,12 @@ public class Flag : MonoBehaviour{
 
   //public GameObject player;
   //private Vector3 playerPos;
+  public string flagName;
  
   // Start is called before the first frame update
   void Start(){
-    
+    flagName = this.name;
+    Debug.Log(flagName);
   }
 
   // Update is called once per frame
