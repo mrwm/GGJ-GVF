@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     private SceneIndexes current_level_index;
     private static GameManager instance;
-    private static int unlockedLevel = 1; 
+    private static int[] unlockedLevels = {1,0,0,0};
     // Start is called before the first frame update
     private void Start()
     {
@@ -23,10 +23,15 @@ public class GameManager : MonoBehaviour
         //singleton pattern
         return instance;
     }
-    public static int getUnlockedLevel()
+    public static int[] getUnlockedLevels()
     {
-        return unlockedLevel;
+        return unlockedLevels;
     }
+    // TODO unlocking level 2 would be unlockLevel(2)
+    // public void unlockLevel(levelNumber){
+    //     int index = levelNumber - 1;
+    //     unlockedLevels[levelNumber - 1] = 1;
+    // }
     public void setLevel (SceneIndexes level)
     {
         current_level_index = level;

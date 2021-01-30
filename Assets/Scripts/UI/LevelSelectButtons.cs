@@ -13,7 +13,7 @@ public class LevelSelectButtons : MonoBehaviour
     {
         initializeLevels();
         back.onClick.AddListener(backOnClick);
-        activateLevel(GameManager.getUnlockedLevel());
+        updateLevels(GameManager.getUnlockedLevels());
         gm = GameManager.getManager();
     }
     private void Awake()
@@ -22,10 +22,20 @@ public class LevelSelectButtons : MonoBehaviour
     }
 
     public void initializeLevels(){
-       level1.interactable = false;
-       level2.interactable = false;
-       level3.interactable = false;
-       level4.interactable = false;
+        level1.interactable = false;
+        level2.interactable = false;
+        level3.interactable = false;
+        level4.interactable = false;
+    }
+
+    public void updateLevels(int[] levels){
+        
+       for (int i = 0; i < levels.Length -1; i++)
+        {
+           if(levels[i] == 1) {
+             activateLevel(i+1);
+           }
+        }
     }
 
     public void activateLevel(int number){
