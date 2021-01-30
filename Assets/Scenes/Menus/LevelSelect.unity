@@ -244,7 +244,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b923cfec741bd6d4c812649dd482b3bb, type: 3}
     m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 1
@@ -299,11 +299,11 @@ RectTransform:
   m_Father: {fileID: 1147740116}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -227.01, y: 154.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 298, y: -169}
   m_SizeDelta: {x: 50.57727, y: 38.267258}
-  m_Pivot: {x: -1.2552732, y: 2.6357098}
+  m_Pivot: {x: 5.5233564, y: -3.0867598}
 --- !u!114 &170571761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b923cfec741bd6d4c812649dd482b3bb, type: 3}
     m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 1
@@ -760,8 +760,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 34
+    m_Font: {fileID: 12800000, guid: b923cfec741bd6d4c812649dd482b3bb, type: 3}
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1025,7 +1025,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b923cfec741bd6d4c812649dd482b3bb, type: 3}
     m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 1
@@ -1222,7 +1222,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b923cfec741bd6d4c812649dd482b3bb, type: 3}
     m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 1
