@@ -11,7 +11,7 @@ public class Flag : MonoBehaviour{
   // Start is called before the first frame update
   void Start(){
     flagName = this.name;
-    Debug.Log(flagName);
+    //Debug.Log(flagName);
   }
 
   // Update is called once per frame

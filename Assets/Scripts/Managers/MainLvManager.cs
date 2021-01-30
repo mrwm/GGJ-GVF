@@ -26,15 +26,18 @@ public class LevelManager : MonoBehaviour{
         // technically we don't need to do anything since it's the default 
         // starting place for the character
         playerPos = new Vector3(-4.63f, 2.39f, 0f);
-        Debug.Log("Case 1");
+        //Debug.Log("Case 1");
         break;
       case 2:
+        // insert code check mechanic here
+        //
+        //
         //
         playerPos = new Vector3(-4.63f, 2.39f, 0f);
-        Debug.Log("Case 2");
+        //Debug.Log("Case 2");
         break;
       default:
-        Debug.Log("Default case");
+        //Debug.Log("Default case");
         break;
       }
 
