@@ -1,5 +1,1 @@
-# GGJ-GVF
-January Global Game Jam; Grand Violet Fantasy: A quest in search of the lost side characters.
-***
-
-License: https://creativecommons.org/licenses/by/4.0/legalcode
+# THIS BRANCH IS NOT TO BE MERGED WITH MASTER. IT IS MY OLD GAME I MADE A LONG TIME AGO
