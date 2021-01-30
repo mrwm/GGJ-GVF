@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     private SceneIndexes current_level_index;
-    private static GameManager instance; 
+    private static GameManager instance;
+    private static int unlockedLevel = 1; 
     // Start is called before the first frame update
     private void Start()
     {
@@ -21,6 +22,10 @@ public class GameManager : MonoBehaviour
     {
         //singleton pattern
         return instance;
+    }
+    public static int getUnlockedLevel()
+    {
+        return unlockedLevel;
     }
     public void setLevel (SceneIndexes level)
     {
