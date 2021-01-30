@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8722187305096361509}
   - component: {fileID: 8722187305096361508}
   - component: {fileID: 8722187305096361511}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground-hold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
