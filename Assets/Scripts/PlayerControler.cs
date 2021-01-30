@@ -12,6 +12,8 @@ public class PlayerControler : MonoBehaviour{
   public float groundCheckRadius;
   public LayerMask groundLayer;
   private bool isTouchGround;
+  private Animator playerAnimation;
+
   private Vector2 spriteScale;
   private bool doubleJump;
 
@@ -19,11 +21,12 @@ public class PlayerControler : MonoBehaviour{
   void Start(){
     rigidBody = GetComponent<Rigidbody2D>();
     spriteScale = transform.localScale;
+    doubleJump = true;
+    playerAnimation = GetComponent<Animator>();
   }
 
   // Update is called once per frame
   void Update(){
-    doubleJump = true;
     isTouchGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
     movement = Input.GetAxis("Horizontal");
@@ -35,11 +38,18 @@ public class PlayerControler : MonoBehaviour{
           transform.localScale = new Vector2(-spriteScale.x,spriteScale.y);
     }
 
-    if(Input.GetButtonDown("Jump") && isTouchGround){
-      rigidBody.velocity = new Vector2(rigidBody.velocity.x,jumpSpeed);
-      Debug.Log(isTouchGround);
-      //if (doubleJump) // currently broken right now
-        //doubleJump = false; // immediately disable double jump after jumping again.
+    if(Input.GetButtonDown("Jump")){
+      if (doubleJump && !isTouchGround){
+        rigidBody.velocity = new Vector2(rigidBody.velocity.x,jumpSpeed);
+        doubleJump = false;
+      }
+      else if (isTouchGround){
+        rigidBody.velocity = new Vector2(rigidBody.velocity.x,jumpSpeed);
+        doubleJump = true;
+      }
     }
+
+    playerAnimation.SetFloat("Speed", Mathf.Abs(rigidBody.velocity.x));
+    playerAnimation.SetBool("OnGround", isTouchGround);
   }
 }
