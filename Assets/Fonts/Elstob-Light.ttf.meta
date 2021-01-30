@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: c154d6c97ca743e48bcaaea5302ac1cf
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Elstob
+  fontNames:
+  - Elstob
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f0090a52d60d0374285872cc524b1a14, type: 3}
+  - {fileID: 12800000, guid: 000c2228c6b4b1248909258c828bfac2, type: 3}
+  - {fileID: 12800000, guid: 303eb9789c375934992acee2d5546b81, type: 3}
+  - {fileID: 12800000, guid: 2015306e280bb4647a2a186cceb722a8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
