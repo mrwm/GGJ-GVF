@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     private SceneIndexes current_scene_index;
-    private LevelIndexes current_level_index;
+    private int current_level_index;
     private static GameManager instance;
     public bool second_load = true;
     public float health_level = 1.0f;
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
         current_scene_index = SceneIndexes.MAINMENU;
-        current_level_index = LevelIndexes.LVONE;
+        //current_level_index = LevelIndexes.LVONE;
         instance.setScene(current_scene_index);
         instance.setLevel(current_level_index);
         LoadGame();
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         return (int)current_scene_index;
     }
 
-    public void setLevel (LevelIndexes lvl)
+    public void setLevel (int lvl)
     {
         current_level_index = lvl;
     }

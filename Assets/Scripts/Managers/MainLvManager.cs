@@ -24,9 +24,6 @@ public class MainLvManager : MonoBehaviour{
     void Start(){
     gm = GameManager.getManager();
     levelInd = gm.getLevel();
-        player = GameObject.FindGameObjectWithTag("Player");
-        rb = player.GetComponent<Rigidbody2D>();
-        Debug.Log(levelInd);
 
     switch (levelInd){
             case 0:
