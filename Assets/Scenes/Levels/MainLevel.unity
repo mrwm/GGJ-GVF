@@ -166,10 +166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1986726349}
   cmera: {fileID: 519420028}
-  flagRight1: {fileID: 154970339}
-  flagRight2: {fileID: 995313044}
-  flagRight3: {fileID: 0}
-  flagRight4: {fileID: 0}
   flagLeft1: {fileID: 1110053900}
   flagLeft2: {fileID: 162046711}
   flagLeft3: {fileID: 0}
@@ -1524,7 +1520,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110053900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.78, y: -0.03, z: 0}
+  m_LocalPosition: {x: -8.14, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1630992887}
@@ -1721,17 +1717,17 @@ PrefabInstance:
     - target: {fileID: 8722187305096361509, guid: a95da525b42ae9a0791a454983f556e4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.5
+      value: 55.56
       objectReference: {fileID: 0}
     - target: {fileID: 8722187305096361509, guid: a95da525b42ae9a0791a454983f556e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.39
+      value: 2.64
       objectReference: {fileID: 0}
     - target: {fileID: 8722187305096361509, guid: a95da525b42ae9a0791a454983f556e4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.22
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 8722187305096361509, guid: a95da525b42ae9a0791a454983f556e4,
         type: 3}
