@@ -7,10 +7,16 @@ public class CameraControl : MonoBehaviour{
   public GameObject player;
   private Vector3 playerPos;
 
-  private GameObject flagRight;
+  public GameObject flagRight1;
+  public GameObject flagRight2;
+  public GameObject flagRight3;
+  public GameObject flagRight4;
   private float flagRightPos;
 
-  private GameObject flagLeft;
+  public GameObject flagLeft1;
+  public GameObject flagLeft2;
+  public GameObject flagLeft3;
+  public GameObject flagLeft4;
   private float flagLeftPos;
 
   private float offset;
@@ -31,17 +37,6 @@ public class CameraControl : MonoBehaviour{
     gm = GameManager.getManager();
     levelInd = gm.getLevel();
 
-    // locate flag according to level index. This will set camera limits
-    string leftF = "left-"+levelInd;
-    string rightF = "right-"+levelInd;
-    //flagLeft = GameObject.Find("Flag");
-    //flagRight = GameObject.Find(/LevelFlags/rightF);
-    Debug.Log("LEFT: "+leftF);
-
-
-
-
-
     // Get camera dimensions
     camera = Camera.main;
     halfHeight = camera.orthographicSize;
@@ -61,8 +56,6 @@ public class CameraControl : MonoBehaviour{
     // Get the player's X-position
     playerPos = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
 
-    //flagLeftPos = flagLeft.transform.position.x - player.transform.position.x;
-    //flagRightPos = flagRight.transform.position.x - player.transform.position.x;
 
     // Update the location of the camera according to the player's X-position 
     if(player.transform.localScale.x > 0f)
@@ -70,11 +63,36 @@ public class CameraControl : MonoBehaviour{
     else
       playerPos = new Vector3(playerPos.x - offset, transform.position.y, transform.position.z);
 
+    switch (levelInd){
+      case 1:
+        flagLeftPos = player.transform.position.x - flagLeft1.transform.position.x;
+        flagRightPos = flagRight1.transform.position.x - player.transform.position.x;
+        break;
+      case 2:
+        flagLeftPos = player.transform.position.x - flagLeft2.transform.position.x;
+        flagRightPos = flagRight2.transform.position.x - player.transform.position.x;
+        break;
+      case 3:
+        flagLeftPos = flagLeft3.transform.position.x - player.transform.position.x;
+        flagRightPos = flagRight3.transform.position.x - player.transform.position.x;
+        break;
+      case 4:
+        flagLeftPos = player.transform.position.x - flagLeft4.transform.position.x;
+        flagRightPos = flagRight4.transform.position.x - player.transform.position.x;
+        break;
+      default:
+        flagLeftPos = player.transform.position.x - flagLeft1.transform.position.x;
+        flagRightPos = flagRight1.transform.position.x - player.transform.position.x;
+        break;
+    }
+
+
+
     // Stop the camera from panning more to the right if player passed the flag
-    //if(flagLeftPos < horizontalMin)
+    if(flagLeftPos < horizontalMin)
       transform.position = Vector3.Lerp(transform.position, playerPos, offsetSmooth * Time.deltaTime);
-    //if(flagRightPos > horizontalMax)
-    //  transform.position = Vector3.Lerp(transform.position, playerPos, offsetSmooth * Time.deltaTime);
+    if(flagRightPos > horizontalMax)
+      transform.position = Vector3.Lerp(transform.position, playerPos, offsetSmooth * Time.deltaTime);
   }
 
   void levelCamera(){
