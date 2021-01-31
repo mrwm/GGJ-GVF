@@ -24,8 +24,6 @@ public class MainLvManager : MonoBehaviour{
   void Start(){
     gm = GameManager.getManager();
     levelInd = gm.getLevel();
-    //Debug.Log(levelInd);
-    levelInd = 2;
 
     switch (levelInd){
       case 1:
