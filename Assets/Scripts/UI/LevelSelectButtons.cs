@@ -52,15 +52,15 @@ public class LevelSelectButtons : MonoBehaviour
         break;
        case 2:
         level2.interactable = true;
-        level2.onClick.AddListener(leveloneOnClick);
+        level2.onClick.AddListener(leveltwoOnClick);
         break;
         case 3:
         level3.interactable = true;
-        level3.onClick.AddListener(leveloneOnClick);
+        level3.onClick.AddListener(levelthreeOnClick);
         break;
        case 4:
         level4.interactable = true;
-        level4.onClick.AddListener(leveloneOnClick);
+        level4.onClick.AddListener(levelfourOnClick);
         break;
       } 
     }

@@ -96,7 +96,7 @@ public class CameraControl : MonoBehaviour{
 
 
     // Stop the camera from panning more to the right if player passed the flag
-    if(flagRightPos > horizontalMax && flagLeftPos > 0)
+    if(flagRightPos > horizontalMax && flagLeftPos > 0 || yVal < -10)
       transform.position = Vector3.Lerp(transform.position, playerPos, offsetSmooth * Time.deltaTime);
   }
 
