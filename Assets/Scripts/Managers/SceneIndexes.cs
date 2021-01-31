@@ -8,5 +8,6 @@ public enum SceneIndexes
    MAINMENU = 1,
    LEVEL_SELECT = 2,
    LOADING = 3,
-   GAME = 4
+   GAME = 4,
+   VR_LVLONE = 5,
 }
