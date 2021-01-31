@@ -24,33 +24,15 @@ public class MainLvManager : MonoBehaviour{
     void Start(){
     gm = GameManager.getManager();
     levelInd = gm.getLevel();
-<<<<<<< Updated upstream
-    //Debug.Log(levelInd);
-    levelInd = 2;
-=======
         player = GameObject.FindGameObjectWithTag("Player");
         rb = player.GetComponent<Rigidbody2D>();
         Debug.Log(levelInd);
->>>>>>> Stashed changes
 
     switch (levelInd){
             case 0:
                 playerPos = level_locations[0];
                 break;
       case 1:
-<<<<<<< Updated upstream
-        playerPos = new Vector3(flagLeft1.transform.position.x + (player.transform.localScale.x * 2), flagLeft1.transform.position.y, player.transform.position.z);
-        //Debug.Log("Case 1");
-        break;
-      case 2:
-        // insert code check mechanic here
-        //
-        //
-        //
-        playerPos = new Vector3(flagLeft2.transform.position.x + (player.transform.localScale.x * 2), flagLeft2.transform.position.y, player.transform.position.z);
-        Debug.Log("Case 2");
-        break;
-=======
                 playerPos = level_locations[1];
         //Debug.Log("Case 1");
         break;
@@ -63,7 +45,6 @@ public class MainLvManager : MonoBehaviour{
             case 4:
                 playerPos = level_locations[4];
                 break;
->>>>>>> Stashed changes
       default:
                 playerPos = level_locations[0];
         break;
