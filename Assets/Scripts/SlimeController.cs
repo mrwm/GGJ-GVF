@@ -76,7 +76,6 @@ public class SlimeController : MonoBehaviour{
     else if ( pos.x > rightBoundLimit ){
       speed = -Mathf.Abs(speed); // Move left
       transform.localScale = new Vector2(-transform.localScale.x,transform.localScale.y);
-      Debug.Log(leftBoundLimit);
     }
   }
 
