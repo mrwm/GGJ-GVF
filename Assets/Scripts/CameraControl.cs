@@ -63,6 +63,7 @@ public class CameraControl : MonoBehaviour{
     else
       playerPos = new Vector3(playerPos.x - offset, transform.position.y, transform.position.z);
 
+    levelInd = 2;
     switch (levelInd){
       case 1:
         flagLeftPos = player.transform.position.x - flagLeft1.transform.position.x;
