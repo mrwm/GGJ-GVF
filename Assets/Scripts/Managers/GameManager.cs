@@ -8,22 +8,13 @@ public class GameManager : MonoBehaviour
 {
     private SceneIndexes current_scene_index;
     private LevelIndexes current_level_index;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    private static GameManager instance; 
-=======
-=======
->>>>>>> origin/mrwm
     private static GameManager instance;
     public bool second_load = true;
     public float health_level = 1.0f;
     public int number_of_chests_collected = 0;
     public int total_gacha_currency = 0;
     public int total_princess_saved = 0;
-<<<<<<< HEAD
->>>>>>> 55fa0a5402d8dddb6bc990b24eb200b762bbac05
-=======
->>>>>>> origin/mrwm
+    
     // Start is called before the first frame update
     private void Start()
     {
@@ -32,6 +23,7 @@ public class GameManager : MonoBehaviour
         current_scene_index = SceneIndexes.MAINMENU;
         current_level_index = LevelIndexes.LVONE;
         instance.setScene(current_scene_index);
+        instance.setLevel(current_level_index);
         LoadGame();
     }
     public static GameManager getManager()
@@ -62,14 +54,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadGame()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         instance.second_load = !instance.second_load;
->>>>>>> 55fa0a5402d8dddb6bc990b24eb200b762bbac05
-=======
-        instance.second_load = !instance.second_load;
->>>>>>> origin/mrwm
         SceneManager.LoadScene((int)current_scene_index);
     }
 }
