@@ -62,8 +62,11 @@ public class CameraControl : MonoBehaviour{
     float yVal = playerPos.y;
     if(yVal > (halfHeight - playerPos.y))
       yVal = halfHeight;
+    else if (yVal < -halfHeight)
+      yVal = -halfHeight;
     else
       yVal = yLoc;
+
     if(player.transform.localScale.x > 0f)
       playerPos = new Vector3(playerPos.x + offset, yVal, transform.position.z);
     else
@@ -96,7 +99,7 @@ public class CameraControl : MonoBehaviour{
 
 
     // Stop the camera from panning more to the right if player passed the flag
-    if(flagRightPos > horizontalMax && flagLeftPos > 0 || yVal < -10)
+    if(flagRightPos > horizontalMax && flagLeftPos > 0 || yVal < -15)
       transform.position = Vector3.Lerp(transform.position, playerPos, offsetSmooth * Time.deltaTime);
   }
 
