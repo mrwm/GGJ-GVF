@@ -51,7 +51,6 @@ public class MainLvManager : MonoBehaviour{
       }
         player.GetComponent<Transform>().position = playerPos.position;
 
-    player.transform.position = playerPos;
   }
 
   // Update is called once per frame
