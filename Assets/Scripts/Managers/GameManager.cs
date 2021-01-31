@@ -61,4 +61,15 @@ public class GameManager : MonoBehaviour
         instance.second_load = !instance.second_load;
         SceneManager.LoadScene((int)current_scene_index);
     }
+
+
+    public void setHealth (float hit)
+    {
+        health_level = hit;
+    }
+    public float getHealth()
+    {
+        return (float)health_level;
+    }
+
 }
