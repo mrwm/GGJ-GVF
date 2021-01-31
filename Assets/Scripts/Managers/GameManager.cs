@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public int number_of_chests_collected = 0;
     public int total_gacha_currency = 0;
     public int total_princess_saved = 0;
-    
+    private static int[] unlockedLevels = {1,0,0,0};
     // Start is called before the first frame update
     private void Start()
     {
@@ -25,6 +25,10 @@ public class GameManager : MonoBehaviour
         instance.setScene(current_scene_index);
         instance.setLevel(current_level_index);
         LoadGame();
+    }
+    public static int[] getUnlockedLevels()
+    {
+        return unlockedLevels;
     }
     public static GameManager getManager()
     {
