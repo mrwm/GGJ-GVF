@@ -73,8 +73,9 @@ public class CameraControl : MonoBehaviour{
         flagRightPos = flagRight2.transform.position.x - player.transform.position.x;
         break;
       case 3:
-        flagLeftPos = flagLeft3.transform.position.x - player.transform.position.x;
+        flagLeftPos = player.transform.position.x - flagLeft3.transform.position.x;
         flagRightPos = flagRight3.transform.position.x - player.transform.position.x;
+        Debug.Log(flagLeftPos);
         break;
       case 4:
         flagLeftPos = player.transform.position.x - flagLeft4.transform.position.x;

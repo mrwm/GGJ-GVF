@@ -36,7 +36,20 @@ public class MainLvManager : MonoBehaviour{
         //
         //
         playerPos = new Vector3(flagLeft2.transform.position.x + (player.transform.localScale.x * 2), flagLeft2.transform.position.y, player.transform.position.z);
-        //Debug.Log("Case 2");
+        break;
+      case 3:
+        // insert code check mechanic here
+        //
+        //
+        //
+        playerPos = new Vector3(flagLeft3.transform.position.x + (player.transform.localScale.x * 2), flagLeft3.transform.position.y, player.transform.position.z);
+        break;
+      case 4:
+        // insert code check mechanic here
+        //
+        //
+        //
+        playerPos = new Vector3(flagLeft4.transform.position.x + (player.transform.localScale.x * 2), flagLeft4.transform.position.y, player.transform.position.z);
         break;
       default:
         //Debug.Log("Default case");
