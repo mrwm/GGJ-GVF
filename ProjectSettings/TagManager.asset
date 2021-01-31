@@ -6,7 +6,8 @@ TagManager:
   tags:
   - GameManager
   - Flag
-  - Weapon
+  - Laser
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Enemy
   - 
   - 
   - 

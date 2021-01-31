@@ -41,7 +41,7 @@ public class LootSystem : MonoBehaviour
         }
     }
 
-    void Spawn()
+    public void Spawn()
     {
         float randomNum = Random.Range(0, 100);
 

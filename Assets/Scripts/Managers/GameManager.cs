@@ -61,7 +61,11 @@ public class GameManager : MonoBehaviour
         instance.second_load = !instance.second_load;
         SceneManager.LoadScene((int)current_scene_index);
     }
-
+    public void addPoints(int amount)
+    {
+        total_gacha_currency += amount;
+        Debug.Log(total_gacha_currency);
+    }
 
     public void setHealth (float hit)
     {

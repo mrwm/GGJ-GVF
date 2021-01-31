@@ -47,11 +47,12 @@ public class PlayerControler : MonoBehaviour{
 
     if(Input.GetButtonDown("Jump")){
       if(!audioSrc.Equals(null)){
-        audioSrc.PlayOneShot(jump);
+        
       }
       if (doubleJump && !isTouchGround){
         rigidBody.velocity = new Vector2(rigidBody.velocity.x,jumpSpeed);
         doubleJump = false;
+                audioSrc.PlayOneShot(jump);
       }
       else if (isTouchGround){
         rigidBody.velocity = new Vector2(rigidBody.velocity.x,jumpSpeed);
@@ -59,6 +60,10 @@ public class PlayerControler : MonoBehaviour{
       }
     }
 
+    if(Input.GetMouseButtonDown(0))
+        {
+            playerAnimation.SetTrigger("Attack");
+        }
     playerAnimation.SetFloat("Speed", Mathf.Abs(rigidBody.velocity.x));
     playerAnimation.SetBool("OnGround", isTouchGround);
   }
