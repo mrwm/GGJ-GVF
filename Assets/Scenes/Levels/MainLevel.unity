@@ -164,17 +164,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f4b4a0020820ed029c7f756c3164bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelInd: 3
+  player: {fileID: 1986726349}
   cmera: {fileID: 519420028}
   flagLeft1: {fileID: 1110053900}
   flagLeft2: {fileID: 162046711}
   flagLeft3: {fileID: 0}
   flagLeft4: {fileID: 0}
-  level_locations:
-  - {fileID: 173839515}
-  - {fileID: 2049376584}
-  - {fileID: 2037020877}
-  - {fileID: 533676985}
 --- !u!1 &83300908
 GameObject:
   m_ObjectHideFlags: 0
