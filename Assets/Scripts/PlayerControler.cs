@@ -13,7 +13,7 @@ public class PlayerControler : MonoBehaviour{
   public LayerMask groundLayer;
   private bool isTouchGround;
   private Animator playerAnimation;
-
+  private AudioSource audioSrc;
   private Vector2 spriteScale;
   private bool doubleJump;
 
@@ -23,6 +23,7 @@ public class PlayerControler : MonoBehaviour{
     spriteScale = transform.localScale;
     doubleJump = true;
     playerAnimation = GetComponent<Animator>();
+    audioSrc = GetComponent<AudioSource>();
   }
 
   // Update is called once per frame
@@ -30,13 +31,19 @@ public class PlayerControler : MonoBehaviour{
     isTouchGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
     movement = Input.GetAxis("Horizontal");
+    // Player movement Logic
     if (movement != 0f){
+      if(!audioSrc.isPlaying){
+        audioSrc.Play();
+      }
       rigidBody.velocity = new Vector2(movement*speed, rigidBody.velocity.y);
         if (movement > 0f)
           transform.localScale = new Vector2(spriteScale.x,spriteScale.y);
         else
           transform.localScale = new Vector2(-spriteScale.x,spriteScale.y);
-    }
+    }else{
+        audioSrc.Stop();
+      }
 
     if(Input.GetButtonDown("Jump")){
       if (doubleJump && !isTouchGround){
