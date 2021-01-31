@@ -21,7 +21,7 @@ public class TeleportArrow : MonoBehaviour{
     Debug.Log(other.tag);
     if (other.tag == "Player"){
       gm.setScene(SceneIndexes.GAME);
-      if ((gm.getLevel()+1) < 4)
+      if ((gm.getLevel()+1) < 5)
         gm.setLevel((int)gm.getLevel()+1);
       scene_choice = SceneIndexes.LOADING;
       SceneManager.LoadScene((int)scene_choice);
