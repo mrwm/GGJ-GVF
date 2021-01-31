@@ -24,12 +24,12 @@ public class MainLvManager : MonoBehaviour{
   void Start(){
     gm = GameManager.getManager();
     levelInd = gm.getLevel();
-    Debug.Log(levelInd);
+    //Debug.Log(levelInd);
     levelInd = 2;
 
     switch (levelInd){
       case 1:
-        playerPos = new Vector3(flagLeft1.transform.position.x, flagLeft1.transform.position.y, player.transform.position.z);
+        playerPos = new Vector3(flagLeft1.transform.position.x + (player.transform.localScale.x * 2), flagLeft1.transform.position.y, player.transform.position.z);
         //Debug.Log("Case 1");
         break;
       case 2:
@@ -37,7 +37,7 @@ public class MainLvManager : MonoBehaviour{
         //
         //
         //
-        playerPos = new Vector3(flagLeft2.transform.position.x, flagLeft2.transform.position.y, player.transform.position.z);
+        playerPos = new Vector3(flagLeft2.transform.position.x + (player.transform.localScale.x * 2), flagLeft2.transform.position.y, player.transform.position.z);
         Debug.Log("Case 2");
         break;
       default:

@@ -43,7 +43,7 @@ public class CameraControl : MonoBehaviour{
     halfWidth = camera.aspect * halfHeight;
 
     // Get the min and max of camera dimensions
-    horizontalMin = -halfWidth;
+    //horizontalMin = -halfWidth;
     horizontalMax =  halfWidth;
 
     // Makes the player not in the center of the camera
@@ -90,9 +90,7 @@ public class CameraControl : MonoBehaviour{
 
 
     // Stop the camera from panning more to the right if player passed the flag
-    if(flagLeftPos < horizontalMin)
-      transform.position = Vector3.Lerp(transform.position, playerPos, offsetSmooth * Time.deltaTime);
-    if(flagRightPos > horizontalMax)
+    if(flagRightPos > horizontalMax && flagLeftPos > 0)
       transform.position = Vector3.Lerp(transform.position, playerPos, offsetSmooth * Time.deltaTime);
   }
 
