@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlimeController : MonoBehaviour{
   private GameManager gm;
-  private float player_health;
+  private int player_health;
   private float slime_health;
 
   public float leftBoundLimit;
@@ -45,12 +45,9 @@ public class SlimeController : MonoBehaviour{
 
   void OnTriggerEnter2D(Collider2D other){
     if (other.tag == "Player"){
-      player_health = gm.getHealth();
-      player_health -= 1;
-      gm.setHealth(player_health);
-    }
-    else if (other.tag == "Weapon"){
-      slime_health -= 2.5f;
+            Debug.Log("Touched Player");
+            other.gameObject.GetComponent<Rigidbody2D>().AddForce(-transform.forward * jumpForce, ForceMode2D.Impulse);
+      gm.setHealth(gm.getHealth()-1);
     }
   }
 

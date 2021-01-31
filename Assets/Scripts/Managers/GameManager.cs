@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private int current_level_index;
     private static GameManager instance;
     public bool second_load = true;
-    public float health_level = 1.0f;
+    public int health_level = 4;
     public int number_of_chests_collected = 0;
     public int total_gacha_currency = 0;
     public int total_princess_saved = 0;
@@ -68,13 +68,17 @@ public class GameManager : MonoBehaviour
         Debug.Log(total_gacha_currency);
     }
 
-    public void setHealth (float hit)
+    public void takeDamage(int hit)
+    {
+        health_level -= hit;
+    }
+    public void setHealth (int hit)
     {
         health_level = hit;
     }
-    public float getHealth()
+    public int getHealth()
     {
-        return (float)health_level;
+        return health_level;
     }
 
 }
