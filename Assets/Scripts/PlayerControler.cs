@@ -35,7 +35,7 @@ public class PlayerControler : MonoBehaviour{
     movement = Input.GetAxis("Horizontal");
     // Player movement Logic
     if (movement != 0f){
-      if(!audioSrc.isPlaying){
+      if(!audioSrc.Equals(null)  && !audioSrc.isPlaying){
         audioSrc.PlayOneShot(footsteps);
       }
       rigidBody.velocity = new Vector2(movement*speed, rigidBody.velocity.y);
@@ -46,7 +46,9 @@ public class PlayerControler : MonoBehaviour{
     }
 
     if(Input.GetButtonDown("Jump")){
-      audioSrc.PlayOneShot(jump);
+      if(!audioSrc.Equals(null)){
+        audioSrc.PlayOneShot(jump);
+      }
       if (doubleJump && !isTouchGround){
         rigidBody.velocity = new Vector2(rigidBody.velocity.x,jumpSpeed);
         doubleJump = false;
