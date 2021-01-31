@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5312635406762787719}
   - component: {fileID: 6810943866284812625}
   - component: {fileID: -3113446032102440771}
-  - component: {fileID: 4005153917837839147}
+  - component: {fileID: 5868348037899278570}
   m_Layer: 0
   m_Name: RedSlime
   m_TagString: Untagged
@@ -103,9 +103,9 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &4005153917837839147
-BoxCollider2D:
+  m_Constraints: 4
+--- !u!58 &5868348037899278570
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -118,15 +118,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
-    newSize: {x: 14, y: 9.31}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14, y: 9.31}
-  m_EdgeRadius: 0
+  m_Radius: 1.5
