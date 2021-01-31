@@ -16,7 +16,7 @@ public class MainMenuButtons : MonoBehaviour
     void Start()
     {
         btn_start.onClick.AddListener(StartOnClick);
-        
+        anim.SetTrigger("FadeIn");
     }
 
     // Update is called once per frame
@@ -24,7 +24,6 @@ public class MainMenuButtons : MonoBehaviour
     {
         if (exit_fade)
         {
-            anim.SetTrigger("FadeOut");
             timer += Time.deltaTime;
             if (timer >= loadTime)
             {
