@@ -35,6 +35,7 @@ public class CameraControl : MonoBehaviour{
   // Start is called before the first frame update
   void Start(){
     gm = GameManager.getManager();
+    levelInd = gm.getLevel();
 
     // Get camera dimensions
     camera = Camera.main;
