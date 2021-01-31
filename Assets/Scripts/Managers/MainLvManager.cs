@@ -61,6 +61,29 @@ public class MainLvManager : MonoBehaviour{
 
   // Update is called once per frame
   void Update(){
-    
+    if (player.transform.position.y < -10){
+      switch (levelInd){
+        case 1:
+          playerPos = new Vector3(flagLeft1.transform.position.x + (player.transform.localScale.x * 2), flagLeft1.transform.position.y, player.transform.position.z);
+          player.transform.position = playerPos;
+          break;
+        case 2:
+          playerPos = new Vector3(flagLeft2.transform.position.x + (player.transform.localScale.x * 2), flagLeft2.transform.position.y, player.transform.position.z);
+          player.transform.position = playerPos;
+          break;
+        case 3:
+          playerPos = new Vector3(flagLeft3.transform.position.x + (player.transform.localScale.x * 2), flagLeft3.transform.position.y, player.transform.position.z);
+          player.transform.position = playerPos;
+          break;
+        case 4:
+          playerPos = new Vector3(flagLeft4.transform.position.x + (player.transform.localScale.x * 2), flagLeft4.transform.position.y, player.transform.position.z);
+          player.transform.position = playerPos;
+          break;
+        default:
+          playerPos = new Vector3(flagLeft1.transform.position.x + (player.transform.localScale.x * 2), flagLeft1.transform.position.y, player.transform.position.z);
+          player.transform.position = playerPos;
+          break;
+        }
+      }
   }
 }

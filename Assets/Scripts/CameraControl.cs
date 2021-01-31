@@ -28,6 +28,7 @@ public class CameraControl : MonoBehaviour{
   float halfWidth;
   float horizontalMin;
   float horizontalMax;
+  private float yLoc;
 
   private int levelInd;
   private GameManager gm;
@@ -41,6 +42,7 @@ public class CameraControl : MonoBehaviour{
     camera = Camera.main;
     halfHeight = camera.orthographicSize;
     halfWidth = camera.aspect * halfHeight;
+    yLoc = transform.position.y;
 
     // Get the min and max of camera dimensions
     //horizontalMin = -halfWidth;
@@ -54,14 +56,18 @@ public class CameraControl : MonoBehaviour{
   // Update is called once per frame
   void Update(){
     // Get the player's X-position
-    playerPos = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+    playerPos = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
 
-
-    // Update the location of the camera according to the player's X-position 
-    if(player.transform.localScale.x > 0f)
-      playerPos = new Vector3(playerPos.x + offset, transform.position.y, transform.position.z);
+    // Update the location of the camera according to the player position 
+    float yVal = playerPos.y;
+    if(yVal > (halfHeight - playerPos.y))
+      yVal = halfHeight;
     else
-      playerPos = new Vector3(playerPos.x - offset, transform.position.y, transform.position.z);
+      yVal = yLoc;
+    if(player.transform.localScale.x > 0f)
+      playerPos = new Vector3(playerPos.x + offset, yVal, transform.position.z);
+    else
+      playerPos = new Vector3(playerPos.x - offset, yVal, transform.position.z);
 
     switch (levelInd){
       case 1:
