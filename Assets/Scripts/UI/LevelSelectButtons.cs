@@ -46,18 +46,21 @@ public class LevelSelectButtons : MonoBehaviour
     {
         gm.setScene(SceneIndexes.GAME);
         gm.setLevel(LevelIndexes.LVTWO);
+        SceneManager.LoadScene((int)SceneIndexes.LOADING);
 
     }
     void levelthreeOnClick()
     {
         gm.setScene(SceneIndexes.GAME);
         gm.setLevel(LevelIndexes.LVTHREE);
+        SceneManager.LoadScene((int)SceneIndexes.LOADING);
 
     }
     void levelfourOnClick()
     {
         gm.setScene(SceneIndexes.GAME);
         gm.setLevel(LevelIndexes.LVFOUR);
+        SceneManager.LoadScene((int)SceneIndexes.LOADING);
 
     }
 }
